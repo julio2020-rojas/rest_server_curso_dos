@@ -27,7 +27,8 @@ if (process.env.NODE_ENV === 'dev') {
     // urlDB = process.env.MONGOBD;
     //urlDB = `mongodb://${process.env.USER}:${process.env.PASSWORD}@cluster0-shard-00-00.6u4qo.mongodb.net:27017/cafe2?ssl=true&replicaSet=atlas-5vf06m-shard-0&authSource=admin&retryWrites=true&w=majority`;
     //urlDB = 'mongodb://julio2021:w0bsSftccBzBkifO@cluster0-shard-00-00.6u4qo.mongodb.net:27017/cafe';
-    urlDB = 'mongodb://julio2021:w0bsSftccBzBkifO@cluster0-shard-00-00.6u4qo.mongodb.net:27017/cafe?authSource=admin&replicaSet=atlas-5vf06m-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true';
+    // urlDB = 'mongodb://julio2021:w0bsSftccBzBkifO@cluster0-shard-00-00.6u4qo.mongodb.net:27017/cafe?authSource=admin&replicaSet=atlas-5vf06m-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true';
+    urlDB = `${process.env.MONGO_URI}?authSource=admin&replicaSet=atlas-5vf06m-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true`;
 }
 
 process.env.URLDB = urlDB;
